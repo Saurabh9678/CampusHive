@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+    
+}
+
+
+
+
+li {
+    list-style: none;
+    color: white;
+    cursor: pointer;
+}
+
+li:hover{
+    color: aqua;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: aqua;
+}
+
+.header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+
+}
+
+.navbar .logo{ 
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+} 
+
+
+.navbar .NavIteams{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.action-btn{
+    background: rgb(94,151,220);
+    padding: 0.5rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: scale 0.2 ease ;
+    cursor: pointer;
+}
+
+.action-btn:hover{
+    scale:1.05;
+    background:  #FFFFFF;
+   
+}
+
+.action-btn:active{
+    scale: 0.95;
+}
+
+
+.dropdown_menu{
+   display: none;
+   position:absolute;
+   right: 2rem;
+   top: 60px;
+   height: 0;
+   width: 400px; 
+   background: rgb(255, 255, 255, 0.1);
+   backdrop-filter: blur(15px);
+   border-radius: 10px;
+   overflow: hidden;
+   transition: height 0.2s cubic-bezier(0.175, 0.885 , 0.32, 1.275);
+}   
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media(max-width: 992px){
+    .navbar .NavIteams,
+    .navbar .action-btn{
+        display: none;
+    }
+
+    .action-btn2{
+    background: rgb(94,151,220);
+    background: linear-gradient(90deg, rgba(94,151,220,1) 28%, rgba(230,70,165,1) 74%);
+    padding: 0.5rem 5rem;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: scale 0.2 ease ;
+    cursor: pointer;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+      display: block;
+    }
+}
+
+
+@media(max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
