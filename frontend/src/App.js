@@ -10,6 +10,7 @@ import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import JoinChat from "./Pages/JoinChat Page/JoinChat";
 import Home from "./Pages/Landing Page/Home"
 import Dialogue from "./Pages/Dialogue Page/Dialogue";
+import JoinChat2 from "./Pages/JoinChat Page/JoinChatButton"
 
 
 //Socket connection
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: '/dialogue',
     element: <Dialogue/>
+  },
+  {
+    path: '/joinchat2',
+    element: <JoinChat2/>
   },
   
 ])
