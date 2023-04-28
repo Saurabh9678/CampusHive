@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Chat from './Chat';
+import Chat from '../Pages/ChatPage/Chat';
 import '../App.css';
 
 function JoinChat({socket}) {

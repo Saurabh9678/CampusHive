@@ -1,15 +1,5 @@
-/* Reset styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Google font import */
-  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
-  
-  /* Chat window styles */
-  .chat-window {
+ /* Chat window styles */
+ .chat-window {
     font-family: "Open Sans", sans-serif;
     max-width: 1200px;
     height: 800px;
@@ -18,41 +8,41 @@
     border-radius: 6px;
     overflow: hidden;
   }
-  
+
   .chat-header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-    background-color: #128C7E;
+    background-color: #3b5998;
     color: #fff;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
   }
-  
+
   .chat-body {
-    background-color: #F5F5F5;
+    background-color: #f2f2f2;
     height: 600px;
     overflow-y: scroll;
   }
-  
+
   .chat-body::-webkit-scrollbar {
     display: none;
   }
-  
+
   .message-container {
     display: flex;
     flex-direction: column;
     padding: 10px;
   }
-  
+
   .message {
     display: flex;
     align-items: flex-end;
     margin-bottom: 10px;
   }
-  
+
   .message-content {
     max-width: 60%;
     padding: 10px;
@@ -61,36 +51,36 @@
     font-size: 16px;
     word-wrap: break-word;
   }
-  
+
   .you .message-content {
-    background-color: #DCF8C6;
+    background-color: #4b8a2c;
     align-self: flex-start;
     border-top-left-radius: 5px;
   }
-  
+
   .other .message-content {
-    background-color: #F5F5F5;
+    background-color: #fff;
     align-self: flex-end;
     border-top-right-radius: 5px;
   }
-  
+
   .message-meta {
     font-size: 12px;
     color: #999;
     margin-top: 5px;
   }
-  
+
   .message-meta span {
     font-weight: bold;
   }
-  
+
   .chat-footer {
     display: flex;
     align-items: center;
     height: 70px;
     border-top: 1px solid #ccc;
   }
-  
+
   .chat-footer input[type="text"] {
     flex: 1;
     height: 40px;
@@ -98,7 +88,7 @@
     border: none;
     outline: none;
   }
-  
+
   .chat-footer button[type="submit"] {
     display: flex;
     justify-content: center;
@@ -106,13 +96,13 @@
     width: 70px;
     height: 40px;
     margin-right: 10px;
-    background-color: #128C7E;
+    background-color: #3b5998;
     color: #fff;
     border: none;
     border-radius: 20px;
     cursor: pointer;
   }
-  
+
   .chat-footer button[type="submit"]:hover {
-    background-color: #0E6655;
+    background-color: #2d4373;
   }
