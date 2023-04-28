@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const messageSchema = new mongoose.Schema({
+    tag:{
+        type:String,
+        required:[true,"Please Provide message tag"]
+    },
     messages: [
         {
             message: {
@@ -14,7 +18,7 @@ const messageSchema = new mongoose.Schema({
             },
             timestamp: {
                 type: Date,
-                default: new Date(Date.now()).getHours() + ":" + new Date(Date.now()).getMinutes()
+                default: Date.now()
             }
         }
     ]
