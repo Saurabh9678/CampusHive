@@ -7,7 +7,7 @@ import io from "socket.io-client";
 
 //Component Imports
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
-import JoinChat from "./Pages/JoinChat";
+import JoinChat from "./Pages/JoinChat Page/JoinChat";
 import Home from "./Pages/Landing Page/Home"
 import Dialogue from "./Pages/Dialogue Page/Dialogue";
 
