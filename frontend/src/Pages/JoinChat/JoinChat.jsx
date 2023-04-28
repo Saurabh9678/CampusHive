@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Chat from '../Pages/ChatPage/Chat';
-import '../App.css';
+import Chat from '../ChatPage/Chat';
+import './JoinChat.css';
 
 function JoinChat({socket}) {
     const [username, setUsername] = useState("");
