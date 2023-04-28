@@ -10,17 +10,22 @@ import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import JoinChat from "./Pages/JoinChat Page/JoinChat";
 import Home from "./Pages/Landing Page/Home"
 import Dialogue from "./Pages/Dialogue Page/Dialogue";
+<<<<<<< HEAD
 import JoinChat2 from "./Pages/JoinChat Page/JoinChatButton"
 
+=======
+import ConnectCanvas from "./Pages/Canvas Page/ConnectCanvas";
+>>>>>>> b727f4558cebdaf7a8e0bc64f2b6b84f1c065b98
 
 //Socket connection
-const socket = io.connect("http://localhost:4000", (error) => {
-  if (error) {
-    console.log("Socket connection error:", error);
-  } else {
-    console.log("Socket connected successfully!");
-  }
-});
+const server = "http://localhost:4000"
+const connectionOptions = {
+  "force new connection": true,
+  reconnectionAttempts: "Infinity",
+  timeout: 10000,
+  transports: ["websocket"],
+};
+const socket = io(server,connectionOptions);
 
 const router = createBrowserRouter([
   {
@@ -40,8 +45,13 @@ const router = createBrowserRouter([
     element: <Dialogue/>
   },
   {
+<<<<<<< HEAD
     path: '/joinchat2',
     element: <JoinChat2/>
+=======
+    path: '/canvas',
+    element: <ConnectCanvas socket={socket}/>
+>>>>>>> b727f4558cebdaf7a8e0bc64f2b6b84f1c065b98
   },
   
 ])

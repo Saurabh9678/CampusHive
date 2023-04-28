@@ -7,14 +7,21 @@ const {Server} = require("socket.io")
 const dotenv = require("dotenv");
 const Event =  require("../event")
 const connectDataBase = require("./config/database");
-
+const { userJoin, getUsers, userLeave } = require("./utils/user");
 
 
 const app = express();
 app.use(cors())
 app.use(express.json());
 app.use(cookieParser());
-
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 const server = http.createServer(app)
 
@@ -60,6 +67,7 @@ process.on("uncaughtException", (err) => {
 
 
 //Socket Connections
+let imageUrl, userRoom;
 io.on(Event.CONNECTION, (socket)=>{
   console.log(`User connected id: ${socket.id}`);
 
@@ -69,11 +77,44 @@ io.on(Event.CONNECTION, (socket)=>{
   })
   
   socket.on(Event.SEND_MESSAGE, (data)=>{
-      socket.to(data.room).emit("receive_message", data)
+      socket.to(data.room).emit(Event.RECEIVE_MESSAGE, data)
   })
+
+  socket.on(Event.USER_JOINED, (data) => {
+    const { roomId, userId, userName, host, presenter } = data;
+    userRoom = roomId;
+    const user = userJoin(socket.id, userName, roomId, host, presenter);
+    const roomUsers = getUsers(user.room);
+    socket.join(user.room);
+    socket.emit(Event.MESSAGE, {
+      message: "Welcome to ChatRoom",
+    });
+    socket.broadcast.to(user.room).emit(Event.MESSAGE, {
+      message: `${user.username} has joined`,
+    });
+
+    io.to(user.room).emit(Event.USERS, roomUsers);
+    io.to(user.room).emit(Event.CANVAS_IMAGE, imageUrl);
+  });
+
+  socket.on(Event.DRAWING, (data) => {
+    imageUrl = data;
+    socket.broadcast.to(userRoom).emit(Event.CANVAS_IMAGE, imageUrl);
+  });
+
+
 
   socket.on(Event.DISCONNECT,()=>{
       console.log(`User disconnected id: ${socket.id}`);
+      const userLeaves = userLeave(socket.id);
+    const roomUsers = getUsers(userRoom);
+
+    if (userLeaves) {
+      io.to(userLeaves.room).emit(Event.MESSAGE, {
+        message: `${userLeaves.username} left the chat`,
+      });
+      io.to(userLeaves.room).emit(Event.USERS, roomUsers);
+    }
   })
 })
 
