@@ -20,7 +20,7 @@ const Dialogue = () => {
       <p className="PP">
         We're working hard to get our site ready for everyone! While we wrap up the finishing touches, we're adding people gradually to make sure nothing breaks :)
       </p>
-      <Link to="/" className="GetUserName"> Play And Connect &#8594;</Link>
+      <Link to="/canvas" className="GetUserName"> Play And Connect &#8594;</Link>
       <Link to="/joinchat" className="GetUserName"> Join Chat &#8594;</Link>
     </div>
   )
