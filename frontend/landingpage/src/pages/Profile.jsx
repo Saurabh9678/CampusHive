@@ -10,6 +10,8 @@ const Profile = () => {
 
       <Link to="/chatbox">Hello chat room</Link>
 
+      <Link to="/Chat">Hello guys</Link>
+
     </div>
   )
 }

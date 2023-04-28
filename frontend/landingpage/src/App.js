@@ -10,6 +10,7 @@ import Leaderboard from './components/Leaderboard'
 import Dialogue from './components/Dialogue'
 import EnterPhoneNo from './components/EnterPhoneNo'
 import EnterEmail from './components/EnterEmail'
+import Chat from './pages/Chat'
 import Otp from './components/Otp'
 import '../src/App.css'
 import { BrowserRouter as Router , Routes ,Route} from 'react-router-dom';
@@ -46,6 +47,7 @@ const App = () => {
       <Route exact path="/EnterEmail" element={<EnterEmail/>}/>
       <Route exact path="/otppage" element={<Otp/>}/>
       <Route exact path="/chatbox" element={<Chatbox/>}/>
+      <Route exact path="/Chat" element={<Chat/>}/>
       <Route exact path="/card" element={<React.Fragment>
         
 
