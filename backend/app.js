@@ -15,11 +15,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 //Route Imports
-const userRoutes = require("./routes/userRoute");
-const contentRoutes = require("./routes/contentRoute");
+const userRoutes = require("./routes/userRoutes");
+
+
 
 app.use("/api/v1", userRoutes);
-app.use("/api/v1", contentRoutes);
 
 // MiddleWare for Error
 
