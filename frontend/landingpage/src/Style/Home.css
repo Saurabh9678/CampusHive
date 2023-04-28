@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
+}
+
+.container {
+    max-width: 1900px;
+    padding: 0 10%;
+    margin: 0 auto;
+    text-align: center; /* Center button */
+}
+
+.box {
+    height: 70vh;
+}
+
+.font1 {
+    text-align: center;
+    position: relative;
+    top: 20%;
+    font-size: 5vw;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #FFFFFF;
+    
+    font-weight: 900;
+    z-index: -1;
+}
+
+.font2 {
+    position: relative;
+    top: 23%;
+    text-align: center;
+    font-size: 4.5vw;
+    letter-spacing: 1.6px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: rgb(94,151,220);
+    font-family: 'Russo One', sans-serif;
+    font-weight: 900;
+    z-index: -1;
+}
+
+.font3 {
+    position: relative;
+    top: 26%;
+    text-align: center;
+    font-size: 4.9vw;
+    letter-spacing: 1.9px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 900;
+    z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 15%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 0 20%;
+    }
+}
+
+/* button */
+.button {
+    align-items: center;
+    justify-content: center;
+    top: 35%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color:white;
+    width:200px;
+    height:50px;
+    background:rgb(94,151,220);
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    
+}
+
+.button:hover{
+    scale:1.05;
+    background: #FFFFFF;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width: 0;
+    height: 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    animation: border-top-right 2s infinite alternate;
+  }
+
+  @keyframes border-top-right {
+    0%    {width:0px;   height:0px;}
+    25%   {width:200px; height:0px;}
+    50%   {width:200px; height:48px;}
+    100%  {width:200px; height:48px;}
+  }
+
+  .button:after {
+    content: "";
+    position: absolute;
+    right:0;
+    bottom:0;
+    width: 0;
+    height: 0;
+    border-bottom:2px solid white;
+    border-left: 2px solid white;
+    animation: border-bottom-left 2s infinite alternate;
+  }
+
+  @keyframes border-bottom-left {
+    0%    {width:0px;   height:0px; opacity: 0;}
+    50%   {width:0px;   height:0px; opacity: 0;}
+    50.1% {width:0px;   height:0px; opacity: 1;}
+    75%   {width:200px; height:0px; opacity: 1;}
+    100%  {width:200px; height:48px;opacity: 1;}
+  }
+
+
+ 

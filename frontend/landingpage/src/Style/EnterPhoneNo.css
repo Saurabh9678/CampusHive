@@ -1,0 +1,168 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.firstBox{
+    background-color: #1D1C1D;
+    width: 650px;
+    max-width: 100%;
+    height: 437px;
+    padding: 30px 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+}
+.Phoneicon{
+    position: absolute;
+    background-color: #5E97DC;
+    width: 60px;
+    height: 60px;
+    top: 210px;
+    left: 1150px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Emailicon{
+    position: absolute;
+    background-color: #5E97DC;
+    width: 60px;
+    height: 60px;
+    top: 210px;
+    left: 1220px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.X{
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #121312;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+#phone{
+    outline: 0;
+    background-color: #262627;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px;
+    width: 288px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 15px;    
+    color: #fff;
+}
+
+#email{
+    outline: 0;
+    background-color: #262627;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px;
+    width: 288px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 15px;    
+    color: #fff;
+}
+
+.PhoneNoHead{
+    color: #FFFFFF;
+    
+}
+
+.Next{
+    display: block;
+    width: 224px;
+    height: 39px;
+    top: 120px;
+    position: relative;
+    margin: auto;
+    background-color:rgb(94,151,220) ;
+    text-decoration: none;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.2s ease-out;
+}
+
+.ThankYou{
+   color: #A3A4A4;
+   font-size: 14px;
+   opacity: 80%;
+   width: 301px ;
+   height: 36px;
+   position: absolute;
+   top: 80%;
+   left: 28%;
+   font-weight: 400;
+   line-height: 19px;
+   text-align: center
+
+}
+
+
+.Phoneimage{
+    width: 30px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+
+}
+
+
+.Emailimage{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+   .firstBox{
+    width: 90%;
+    margin:15% auto;
+   }
+
+   .ThankYou{
+    width: 60%;
+    left: 20%;
+   }
+
+
+   .Phoneicon {
+    display: none;
+   }
+
+   .Emailicon{
+    display: none;
+   }
+
+}
