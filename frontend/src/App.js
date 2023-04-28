@@ -42,12 +42,12 @@ const router = createBrowserRouter([
   },
   {
     path: '/joinchat2',
-    element: <JoinChat2 />
+    element: <JoinChat2/>
   },
   {
     path: '/canvas',
-    element: <ConnectCanvas socket={socket} />
-  },
+    element: <ConnectCanvas socket={socket}/>
+  }
 
 ])
 

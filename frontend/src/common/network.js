@@ -12,6 +12,11 @@ const PATH = {
     User:{
         SaveUser: `/register`,
         GetUser: `/login`
+    },
+    Chat: {
+        GetTags: `/tags`,
+        GetMessagesByTags: (tag) => `/tags/${tag}`,
+        SaveMessage: `/messages`
     }
 };
 

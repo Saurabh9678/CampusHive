@@ -47,7 +47,7 @@ const RegisterPage = () => {
     API.post(PATH.User.SaveUser, postData).then((res) => {
       localStorage.setItem('token', res.token)
       localStorage.setItem('username', res.user.username)
-      localStorage.setItem('user', res.user)
+      localStorage.setItem('user', JSON.stringify(res.user))
       navigate('/dialogue')
     }
     )
@@ -62,7 +62,7 @@ const RegisterPage = () => {
     API.post(PATH.User.GetUser, postData).then((res) => {
       localStorage.setItem('token', res.token)
       localStorage.setItem('username', res.user.username)
-      localStorage.setItem('user', res.user)
+      localStorage.setItem('user', JSON.stringify(res.user))
       navigate('/dialogue')
     }
     )
