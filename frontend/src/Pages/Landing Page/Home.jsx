@@ -1,8 +1,11 @@
 import React from 'react'
-import "../Style/Home.css"
+import "./Home.css"
+import NavBar from "../../components/NavBar"
 import {Link} from "react-router-dom";
 const Home = () => {
   return (
+    <>
+    <NavBar title="CampusHive" />
    <div className="container">
     <div className="box">
       <div className="font1">Discover New Peoples</div>
@@ -13,6 +16,7 @@ const Home = () => {
       <Link to="/register" class="button">SIGNUP</Link>
     </div>
    </div>
+   </>
   )
 }
 

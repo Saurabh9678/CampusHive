@@ -51,7 +51,6 @@ exports.getMessagesByTag = catchAsyncErrors(async (req, res, next) => {
     if (!messages) {
       return res.status(404).json({
         success: false,
-        message: `No messages found for tag ${tag}`
       });
     }
     res.status(200).json({

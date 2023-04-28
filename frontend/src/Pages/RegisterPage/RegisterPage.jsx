@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "../Style/Registerpage.css";
-import img1 from '../Images/fb.png';
-import img2 from '../Images/gp.png';
-import img3 from '../Images/tw.png';
+import { useNavigate } from "react-router-dom";
+import "./RegisterPage.css";
+import img1 from '../../Images/fb.png';
+import img2 from '../../Images/gp.png';
+import img3 from '../../Images/tw.png';
 
-import { API, PATH } from "../common/network";
+import { API, PATH } from "../../common/network";
 
-const Registerpage = () => {
+const RegisterPage = () => {
 
   const navigate = useNavigate()
 
@@ -48,7 +48,7 @@ const Registerpage = () => {
       localStorage.setItem('token', res.token)
       localStorage.setItem('username', res.user.username)
       localStorage.setItem('user', res.user)
-      navigate('/Dialogue')
+      navigate('/dialogue')
     }
     )
   }
@@ -63,7 +63,7 @@ const Registerpage = () => {
       localStorage.setItem('token', res.token)
       localStorage.setItem('username', res.user.username)
       localStorage.setItem('user', res.user)
-      navigate('/Dialogue')
+      navigate('/dialogue')
     }
     )
   }
@@ -114,4 +114,4 @@ const Registerpage = () => {
   );
 };
 
-export default Registerpage;
+export default RegisterPage;

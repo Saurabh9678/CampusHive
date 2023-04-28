@@ -6,7 +6,10 @@ import io from "socket.io-client";
 
 
 //Component Imports
+import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import JoinChat from "./Pages/JoinChat";
+import Home from "./Pages/Landing Page/Home"
+import Dialogue from "./Pages/Dialogue Page/Dialogue";
 
 
 //Socket connection
@@ -21,7 +24,19 @@ const socket = io.connect("http://localhost:4000", (error) => {
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <Home />
+  },
+  {
+    path: '/joinchat',
     element: <JoinChat socket={socket}/>
+  },
+  {
+    path: '/register',
+    element: <RegisterPage/>
+  },
+  {
+    path: '/dialogue',
+    element: <Dialogue/>
   },
   
 ])
@@ -29,6 +44,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <main>
+      
       <RouterProvider router={router}></RouterProvider>
     </main>
   );
