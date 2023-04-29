@@ -144,8 +144,8 @@ const ConnectCanvas = ({ socket }) => {
     return (
       <div className="home">
         <VoiceChannel token={token} isMute={isVoiceMute} username={username} roomId={roomId} />
-        <button onClick={() => leaveRoom()}>Leave Room</button>
-        <button onClick={() => setisVoiceMute(!isVoiceMute)}>Leave Room</button>
+        <button  className ="LeaveRoombtn" onClick={() => leaveRoom()}>Leave Room</button>
+        <button  className="mutebtn" Click={() => setisVoiceMute(!isVoiceMute)}>Mute</button>
         <ToastContainer />
         {isGameStarted ? (
           <>

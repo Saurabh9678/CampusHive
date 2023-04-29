@@ -4,4 +4,47 @@
     font-family: Lato;
     
   }
+
+  .LeaveRoombtn{
+   position: relative;
+   top:750px;
+   left: 500px;
+    text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background: #01D4C4;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+
+  }
+
+  .LeaveRoombtn:hover {
+    color: #34383E;
+    box-shadow: 0 6px 15px #01D4C4;
+  }
+
+
+  .mutebtn{
+    position: relative;
+   top:750px;
+   left: 1020px;
+    text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background: #01D4C4;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  }
+
+  
+  .mutebtn:hover {
+    color:  #34383E;
+    box-shadow: 0 6px 15px  #01D4C4;
+  
+  }
   
