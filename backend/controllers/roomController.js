@@ -17,10 +17,7 @@ exports.getRoom = catchAsyncErrors(async (req, res, next) => {
       const newRoom = await Room.create({
         isEmpty: true,
         members: [{ userId }],
-      }).populate({
-        path: "members.userId",
-        select: "username",
-      });
+      })
 
       return res.status(200).json({
         success: true,

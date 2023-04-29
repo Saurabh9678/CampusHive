@@ -7,10 +7,10 @@
 
 .FromBox {
   width: 380px;
-  height: 480px;
+  height: 550px;
   position: relative;
   margin: 6% auto;
-  background: #1d1c1d;
+  background-color: #1A191A;
   padding: 5px;
   overflow: hidden;
 }
@@ -36,56 +36,56 @@
   top: 0;
   left: 0;
   position: absolute;
-  width: 110px;
+  width: 100px;
   height: 100%;
-  background-color: white;
+  background-color: #1D1C1D;
   border-radius: 10px;
   transition: 0.5s;
 }
 
-.SocailIcons {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.SocailIcons img {
-  width: 30px;
-  margin: 0 12px;
-  cursor: pointer;
-  border-radius: 50%;
-}
 
 .inputs-grp {
-  top: 180px;
+  top: 130px;
   position: absolute;
   width: 280px;
   transition: 0.5s;
 }
 
 .inputfield {
-  color: white;
+  font-weight: 700;
+  border: none;
+  border-bottom: 1px solid #D1D1D4;
+  text-align: center;
+  color: rgb(240, 240, 240);
   width: 100%;
-  padding: 10px 0;
+  padding: 10px;
   margin: 5px 0;
-  border-color: transparent;
   outline: none;
   background: transparent;
+  transition: .2s;
 }
 
 .SubmitBtn {
+  font-size: 23px;
   text-align: center;
   width: 85%;
-  padding: 10px 30px;
+  padding: 5px ;
   cursor: pointer;
-  background: rgb(94, 151, 220);
+  background: #5E97DC;
   border: 0;
-  color: black;
+  color: rgb(255, 255, 255);
   outline: none;
   position: relative;
+  top:50px;
   display: block;
   margin: auto;
   border-radius: 8px;
 }
+.SubmitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 
 .Check_box {
   margin: 30px 10px 30px 0;
