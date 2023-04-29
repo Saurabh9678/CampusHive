@@ -11,9 +11,9 @@ const roomSchema = new mongoose.Schema({
     ],
     isEmpty: {
         type: Boolean,
-        required: [true, "provide if empty or not"]
+        default: true
     },
-    default: false
+    
 });
 
 module.exports = mongoose.model("Room", roomSchema);
