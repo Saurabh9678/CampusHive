@@ -2,19 +2,24 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.App{
-    background-color: #121312;
-}
+
   .joinChatContainer {
     
     margin: 70px ;
     height: 750px;
     width: 1400px;
     text-align: center;
-    background-color: #0abcf9;
-    background-image: linear-gradient(315deg, #0abcf9 0%, #2c69d1 74%);
+    background-color: #34383E;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .hi1{ position: relative;
+    color: #01D4C4;
+    top:39px;
+    right: 150px;
+    font-size: 2rem ;
+
   }
   
   .HJ{
@@ -40,10 +45,11 @@
     bottom: 40px;
     align-self: center;
     justify-content: center;
-    text-align: center;
+    left: 250px;
     color: #eee7e7;
 
   }
 
+ 
   
   

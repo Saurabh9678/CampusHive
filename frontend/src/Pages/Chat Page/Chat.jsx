@@ -80,7 +80,7 @@ function Chat({ socket, username, room }) {
     return (
       <div className="chat-window">
         <div className="chat-header">
-          <p>{room}</p>
+          <p className="Titlechat">{room}</p>
         </div>
         <div className="chat-body">
           <ScrollToBottom className="message-container">

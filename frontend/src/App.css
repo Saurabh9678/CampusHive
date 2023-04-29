@@ -1,8 +1,6 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background: #fff;
-  color: #212121;
   font-family: "Open Sans", sans-serif;
   display: grid;
   place-items: center;
@@ -11,7 +9,7 @@ body {
   margin: 0%;
   padding: 0%;
   height: 100vh;
-  background: #121312;
+ 
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 

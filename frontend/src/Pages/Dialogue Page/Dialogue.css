@@ -6,7 +6,7 @@
   }
   
   .popupD {
-    background-color: #1D1C1D;
+    background-color: #34383E;
     width: 650px;
     max-width: 100%;
     height: 437px;
@@ -24,7 +24,7 @@
     margin: 0 0 20px auto;
     background-color: transparent;
     font-size: 30px;
-    color: #121312;
+    color: #000000;
     border: none;
     outline: none;
     cursor: pointer;
@@ -44,7 +44,7 @@
     top: 40px;
     position: relative;
     margin: 20px;
-    background-color: rgb(94, 151, 220);
+    background-color: #01D4C4;
     text-decoration: none;
     padding: 5px;
     text-align: center;
@@ -58,12 +58,12 @@
     display: block;
     width: 224px;
     height: 39px;
-    bottom: 66px;
+    bottom: 67px;
     left: 70%;
     transform: translateX(-50%);
     position: absolute;
     margin: 20px;
-    background-color: rgb(94, 151, 220);
+    background-color: #01D4C4;
     text-decoration: none;
     padding: 5px;
     text-align: center;
@@ -75,7 +75,7 @@
   
   .GetUserName:hover,
   .GetUserName2:hover {
-    background-color: #5e97dc;
+    background-color: #ffffff;
   }
   
   .Headdingcard {
@@ -97,6 +97,6 @@
     }
   
     .GetUserName2 {
-      bottom: -19px;
+      bottom: -1px;
     }
   }
