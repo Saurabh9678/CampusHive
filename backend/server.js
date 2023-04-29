@@ -49,9 +49,20 @@ const io = new Server(server, {
 //Route Imports
 const userRoutes = require("./routes/userRoutes");
 const messageRoutes = require("./routes/messageRoutes")
+const roomRoutes  = require("./routes/roomRoutes")
+
+
 
 app.use("/api/v1", userRoutes);
-app.use("/api/v1/", messageRoutes)
+app.use("/api/v1", messageRoutes);
+app.use("/api/v1",roomRoutes)
+
+
+
+
+
+
+
 
 // MiddleWare for Error
 app.use(errorMiddleware);

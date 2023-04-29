@@ -1,9 +1,9 @@
 import React from 'react'
 import '../JoinChat Page/ButtonChat.css'
 import { Link } from 'react-router-dom'
-const ButtonChat = () => {
+const ButtonChat = ({children, ...props}) => {
   return (
-    <Link To="something" class="button1 bouncy">Join!</Link>
+    <Link {...props} className="button1 bouncy">{children}</Link>
   )
 }
 
