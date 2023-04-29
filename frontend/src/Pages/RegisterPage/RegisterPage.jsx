@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./RegisterPage.css";
-import img1 from '../../Images/fb.png';
-import img2 from '../../Images/gp.png';
-import img3 from '../../Images/tw.png';
+
 
 import { API, PATH } from "../../common/network";
 
@@ -79,11 +77,6 @@ const RegisterPage = () => {
           <button className="toggleLogin" onClick={handleLogin}>Login</button>
           <button className="toggleLogin" onClick={handleRegister}>Register</button>
         </div>
-        <div className="SocailIcons">
-          <img src={img1} alt="" />
-          <img src={img2} alt="" />
-          <img src={img3} alt="" />
-        </div>
         <form id="loginF" className="inputs-grp" style={{ left: loginLeft }}>
         <input onChange={(e) => setemail(e.target.value)} type="email" className="inputfield" placeholder="Email Id" value={email} required />
           <input onChange={(e) => setpassword(e.target.value)} type="password" className="inputfield" placeholder="Enter Password" value={password} required />
@@ -104,7 +97,7 @@ const RegisterPage = () => {
             <span className="span">i agree to the terms and conditions</span>
           </label> */}
 
-          <button type="button" className="SubmitBtn" onClick={() => registerUser()}>Register</button>
+          <button type="button" className="SubmitBtn" onClick={() => registerUser()}>SignIn</button>
 
           {/* <Link to="/EnterPhoneNo" type="submit" className="SubmitBtn">Register</Link> */}
         </form>
