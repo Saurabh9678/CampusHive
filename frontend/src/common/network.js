@@ -17,6 +17,10 @@ const PATH = {
         GetTags: `/tags`,
         GetMessagesByTags: (tag) => `/tags/${tag}`,
         SaveMessage: `/messages`
+    },
+    Room:{
+        GetRoom: `/joinroom`,
+        LeaveRoom: `/leaveroom`,
     }
 };
 

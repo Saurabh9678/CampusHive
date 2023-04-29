@@ -2,32 +2,31 @@ import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
 
-const JoinCreateRoom = ({ uuid, setUser, setRoomJoined }) => {
-  const [roomId, setRoomId] = useState(uuid());
+const JoinCreateRoom = ({ uuid, setUser, setRoomJoined, roomId }) => {
   const [name, setName] = useState("");
   const [joinName, setJoinName] = useState("");
   const [joinRoomId, setJoinRoomId] = useState("");
 
   const handleCreateSubmit = (e) => {
     e.preventDefault();
-    if (!name) return toast.dark("Please enter your name!");
+    // if (!name) return toast.dark("Please enter your name!");
 
     setUser({
-      roomId,
-      userId: uuid(),
+      roomId:roomId,
+      userId: uuid,
       userName: name,
-      host: true,
+      host: false,
       presenter: true,
     });
+
     setRoomJoined(true);
   };
   const handleJoinSubmit = (e) => {
     e.preventDefault();
-    if (!joinName) return toast.dark("Please enter your name!");
-
+    // if (!joinName) return toast.dark("Please enter your name!");
     setUser({
-      roomId: joinRoomId,
-      userId: uuid(),
+      roomId: roomId,
+      userId: uuid,
       userName: joinName,
       host: false,
       presenter: false,
@@ -73,7 +72,7 @@ const JoinCreateRoom = ({ uuid, setUser, setRoomJoined }) => {
                 <button
                   className="btn btn-outline-primary  border-0 btn-sm"
                   type="button"
-                  onClick={() => setRoomId(uuid())}
+                  // onClick={() => setRoomId(uuid())}
                 >
                   Generate
                 </button>
